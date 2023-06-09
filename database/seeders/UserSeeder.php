@@ -19,8 +19,8 @@ class UserSeeder extends Seeder
     {
         User::truncate();
         User::create([
-            'nim' => '210202029',
-            'password' => hash::make('tami'),
+            'username' => 'mahasiswa',
+            'password' => hash::make('pnchebat'),
             // 'remember_token' => Str::random(60)
         ]);
     }

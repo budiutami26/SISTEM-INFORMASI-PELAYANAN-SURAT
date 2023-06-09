@@ -24,14 +24,14 @@ class LoginController extends Controller
     public function actionlogin(Request $request)
     {
         $data = [
-            'nim' => $request->input('nim'),
+            'username' => $request->input('username'),
             'password' => $request->input('password'),
         ];
 
         if (Auth::attempt($data)) {
             return redirect('/dashboard');
         }else{
-            Session::flash('error', 'nim atau Password Salah');
+            Session::flash('error', 'username atau Password Salah');
             return redirect('/');
         }
     }
