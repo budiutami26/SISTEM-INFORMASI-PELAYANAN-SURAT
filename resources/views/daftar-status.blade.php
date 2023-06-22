@@ -12,8 +12,9 @@
           <div class="card">
               <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
-                        <thead>
+                      <table class="table">
+                          <h5>Tabel Observasi</h5>
+                          <thead>
                           <tr>
                             <th scope="col">No.</th>
                             <th scope="col">NIM</th>

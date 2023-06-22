@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('prestasi',100);
             $table->enum('tingkat',['Kecamatan','Kabupaten','Provinsi','Nasional','Internasional']);
             $table->string('tahun',100);
+            $table->enum('status', ['proses','diterima','ditolak']);
             $table->timestamps();
         });
     }

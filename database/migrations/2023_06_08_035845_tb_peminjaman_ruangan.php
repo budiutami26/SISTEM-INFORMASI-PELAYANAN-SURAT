@@ -21,8 +21,9 @@ return new class extends Migration
             $table->date('tanggal_pelaksana');
             $table->string('ruangan',100);
             $table->string('nama_penanggungjwb',100);
-            $table->string('nohp)',100);
+            $table->string('nohp',100);
             $table->string('keterangan',100);
+            $table->enum('status', ['proses','diterima','ditolak']);
             $table->timestamps();
         });
     }

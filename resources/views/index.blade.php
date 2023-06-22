@@ -9,15 +9,15 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a href="http://e-learning.pnc.ac.id/?redirect=0" class="navbar-brand has-logo" >
           <span class="logo">
             <img src="assets/img/pncgede.png" alt="Politeknik Negeri Cilacap" title="SIPES" width="15%" height="auto">
               </span>
             </a>
             <h4 class="text-align"><br>Bagian Administrasi Akademik dan Kemahasiswaan</h4>
-        </nav>
-    <div class="container "><br>
+        </nav> --}}
+    <div class="container"><br>
         <h1 class="text-center"><b>Selamat Datang di SIPES!</b></h1>
         <h4  class="text-center"><br>Sistem Informasi Pelayanan Permohonan Surat</h4>
         <div class="col-md-4 col-md-offset-4">

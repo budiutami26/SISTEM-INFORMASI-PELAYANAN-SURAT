@@ -12,7 +12,7 @@
 <div class="col-12">
   <div class="card overflow-auto">
     <div class="card-body">
-      <h5 class="card-title"><i class="bi bi-pencil-square"></i>Silakan Pilih Surat Pengajuan<span></span></h5>
+      <h5 class="card-title"><i class="bi bi-pencil-square"></i>Silakan Pilih Layanan<span></span></h5>
       <table class="table">
         <thead>
           <tr>
@@ -32,33 +32,43 @@
             <th scope="row"><a>2</a></th>
             <td>Surat Peminjaman Perlengkapan</td>
             <td>
-              <a href=""><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+              <a href="{{route('tambah_perlengkapan')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
             </td>
           </tr>
           <tr>
             <th scope="row"><a>3</a></th>
             <td>Surat Peminjaman Ruangan Mahasiswa</td>
-            <td><button class="btn btn-light btn-sm"><i class="ri-ball-pen-fill"></i> Pilih </button></td>
-          </tr>
-          <tr>
-            <th scope="row"><a>4</a></th>
-            <td>Proposal Kegiatan</td>
-            <td><button class="btn btn-light btn-sm"><i class="ri-ball-pen-fill"></i> Pilih </button></td>
+            <td>
+              <a href="{{route('tambah_ruangan')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+            </td>
           </tr>
           <tr>
             <th scope="row"><a>5</a></th>
             <td>Surat SKMK</td>
-            <td><button class="btn btn-light btn-sm"><i class="ri-ball-pen-fill"></i> Pilih </button></td>
+            <td>
+              <a href="{{route('tambah_skmk')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><a>4</a></th>
+            <td> Laporan Proposal Kegiatan</td>
+            <td>
+              <a href="{{route('tambah_proposal')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+            </td>
           </tr>
           <tr>
             <th scope="row"><a>6</a></th>
-            <td>Surat Pelaporan LPJ Mahasiswa</td>
-            <td><button class="btn btn-light btn-sm"><i class="ri-ball-pen-fill"></i> Pilih </button></td>
+            <td> Laporan LPJ Mahasiswa </td>
+            <td>
+              <a href="{{route('tambah_lpj')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+            </td>
           </tr>
           <tr>
             <th scope="row"><a>7</a></th>
             <td>Surat Prestasi Mahasiswa</td>
-            <td><button class="btn btn-light btn-sm"><i class="ri-ball-pen-fill"></i> Pilih </button></td>
+            <td>
+              <a href="{{route('tambah_prestasi')}}"><button class="btn btn-primary"><i class="ri-ball-pen-fill"></i> Pilih</button></a>
+            </td>
           </tr>
         </tbody>
       </table>

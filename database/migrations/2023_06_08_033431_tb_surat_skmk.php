@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('nip',100);
             $table->string('golongan',100);
             $table->string('institusi',100);
+            $table->enum('status', ['proses','diterima','ditolak']);
             $table->timestamps();
         });
     }

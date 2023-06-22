@@ -20,9 +20,10 @@ return new class extends Migration
             $table->date('tanggal_pelaksana');
             $table->string('nama_ketua_pelaksana',100);
             $table->string('nohp',100);
-            $table->string('penggunaan_dana(PNC/IOM)',100);
+            $table->string('penggunaan_dana',100);
             $table->string('jml_dana_disetujui',100);
             $table->string('keterangan',100);
+            $table->enum('status', ['proses','diterima','ditolak']);
             $table->timestamps();
         });
     }

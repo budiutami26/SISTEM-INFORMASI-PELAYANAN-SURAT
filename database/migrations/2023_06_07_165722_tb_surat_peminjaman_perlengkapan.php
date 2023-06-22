@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('keterangan',100);
             $table->date('tgl_pengambilan');
             $table->date('tgl_pengembalian');
+            $table->enum('status', ['proses','diterima','ditolak']);
             $table->timestamps();
         });
     }
