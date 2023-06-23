@@ -29,6 +29,9 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)) {
+            // if(Auth::user()->role === 'admin') {
+            //     return
+            // }
             return redirect('/dashboard');
         }else{
             Session::flash('error', 'username atau Password Salah');

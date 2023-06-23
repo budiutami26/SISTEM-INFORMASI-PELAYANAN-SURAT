@@ -16,19 +16,19 @@ use App\Http\Controllers\SuratController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/daftar', function () {
+    return view('daftar-status');
 });
 
 Route::get('/tes', function () {
     return view('layouts.main');
 });
 
+//fungsi untuk login tanpa registrasi
 Route::get('/login',[LoginController::class, 'index'])->name('login');
 Route::get('/dashboard',[DashboardController::class, 'dashboard'])->name("dashboard");
 Route::post('/actionlogin',[LoginController::class, 'actionlogin'])->name("actionlogin");
 Route::get('/actionlogout',[LoginController::class, 'actionlogout'])->name("actionlogout");
-Route::get('/dashboardadmin',[SuratController::class, 'status'])->name("status");
 
 
 //Menampilkan dan Menambah data surat permohonan observasi
@@ -58,3 +58,12 @@ Route::post('/lpj', [SuratController::class, 'store_lpj'])->name("lpj");
 //Menampilkan dan Menambah data surat prestasi mahasiswa
 Route::get('/tambah-prestasi', [SuratController::class, 'prestasi'])->name("tambah_prestasi");
 Route::post('/prestasi', [SuratController::class, 'store_prestasi'])->name("prestasi");
+
+// Untuk menampilkan tabel berdasarkan database surat
+Route::get('/dashboardadmin',[SuratController::class, 'status'])->name("status"); //-> observasi
+Route::get('/status-perlengkapan',[SuratController::class, 'statusperlengkapan'])->name("statusperlengkapan");
+Route::get('/status-ruangan',[SuratController::class, 'statusruangan'])->name("statusruangan");
+Route::get('/status-skmk',[SuratController::class, 'statusskmk'])->name("statusskmk");
+Route::get('/status-laporanmhs',[SuratController::class, 'statuslaporanmhs'])->name("statuslaporanmhs");
+Route::get('/status-lpj',[SuratController::class, 'statuslaporanlpj'])->name("statuslaporanlpj");
+Route::get('/status-prestasi',[SuratController::class, 'statusprestasi'])->name("statusprestasi");

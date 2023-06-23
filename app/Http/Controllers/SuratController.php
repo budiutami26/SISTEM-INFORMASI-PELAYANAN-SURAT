@@ -18,9 +18,37 @@ class SuratController extends Controller
     public function status()
     {
         $data = Surat::all();
-        return view('daftar-status', compact('data')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
-        
-
+        return view('tabel-status.daftar-status', compact('data')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statusperlengkapan()
+    {
+        $dtperlengkapan = Perlengkapan::all();
+        return view('tabel-status.status-perlengkapan', compact('dtperlengkapan')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statusruangan()
+    {
+        $dtruangan = Ruangan::all();
+        return view('tabel-status.status-ruangan', compact('dtruangan')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statusskmk()
+    {
+        $dtskmk = SKMK::all();
+        return view('tabel-status.status-skmk', compact('dtskmk')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statuslaporanmhs()
+    {
+        $dtproposalmhs = Proposal::all();
+        return view('tabel-status.status-laporanproposalkegiatan', compact('dtproposalmhs')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statuslaporanlpj()
+    {
+        $dtlpj = LPJ::all();
+        return view('tabel-status.status-laporanlpj', compact('dtlpj')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
+    }
+    public function statusprestasi()
+    {
+        $dtprestasi = Prestasi::all();
+        return view('tabel-status.status-prestasi', compact('dtprestasi')); //compact('') berfungsi untuk mendaftarkan variabel yang akan digunakan didalam view
     }
 
     // fungsi untuk menambah dan menampilkan data surat observasi
@@ -30,7 +58,7 @@ class SuratController extends Controller
     }
     public function store(Request $request)
     {
- 
+
         $data = Surat::create([
             'nim' => $request->nim,
             'nama' => $request->nama,
