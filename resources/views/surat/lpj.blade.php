@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">LPJ</div>
+                <div class="card-header">Formulir</div>
                 <div class="card-body">
                     {{--  action="{{ ('observasi') }}" mengambil data dari route name() --}}
                     <form method="POST" action="{{ ('lpj') }}">
@@ -50,6 +50,10 @@
                             <input type="text" class="form-control" name="nama_kegiatan" value="{{ old('nama_kegiatan') }}">
                         </div>
                         <div class="form-group">
+                            <label>Nama Ketua Pelaksana</label>
+                            <input type="text" class="form-control" name="nama_ketua_pelaksana" value="{{ old('nama_ketua_pelaksana') }}">
+                        </div>
+                        <div class="form-group">
                             <label>Tanggal Pelaksanaan</label>
                             <input type="date" class="form-control" name="tanggal_pelaksana" value="{{ old('tanggal_pelaksana') }}">
                         </div>
@@ -60,6 +64,10 @@
                         <div class="form-group">
                             <label>Jumlah Dana Yang Disetujui</label>
                             <input type="text" class="form-control" name="jml_dana_disetujui" value="{{ old('jml_dana_disetujui') }}">
+                         </div>
+                        <div class="form-group">
+                            <label>Penggunaan Dana</label>
+                            <input type="text" class="form-control" name="penggunaan_dana" value="{{ old('penggunaan_dana') }}">
                          </div>
                         <div class="form-group">
                             <label>Keterangan</label>

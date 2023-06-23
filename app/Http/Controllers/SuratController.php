@@ -168,9 +168,11 @@ class SuratController extends Controller
         'nama' => $request->nama,
         'semester' => $request->semester,
         'nama_kegiatan' => $request->nama_kegiatan,
+        'nama_ketua_pelaksana' => $request->nama_ketua_pelaksana,
         'tanggal_pelaksana' => $request->tanggal_pelaksana,
         'nohp' => $request->nohp,
         'jml_dana_disetujui' => $request->jml_dana_disetujui,
+        'penggunaan_dana' => $request->penggunaan_dana,
         'keterangan' => $request->keterangan,
         'status' => $request->status,
 

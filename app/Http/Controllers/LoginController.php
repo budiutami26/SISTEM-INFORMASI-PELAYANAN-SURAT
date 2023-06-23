@@ -27,7 +27,6 @@ class LoginController extends Controller
             'username' => $request->input('username'),
             'password' => $request->input('password'),
         ];
-
         if (Auth::attempt($data)) {
             // if(Auth::user()->role === 'admin') {
             //     return
@@ -37,6 +36,7 @@ class LoginController extends Controller
             Session::flash('error', 'username atau Password Salah');
             return redirect('/');
         }
+        
     }
 
     public function actionlogout()

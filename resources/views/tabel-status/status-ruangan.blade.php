@@ -3,7 +3,7 @@
 @section('content')
 
 <nav>
-    <h4>Daftar Status Pengajuan Peminjaman Perlengkapan</h4>
+    <h4>Daftar Status Pengajuan Peminjaman Ruangan Mahasiswa</h4>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
       <li class="breadcrumb-item active">Status</li>
@@ -23,6 +23,7 @@
                           <th scope="col">Nama Penanggung Jawab</th>
                           <th scope="col">Nama Kegiatan</th>
                           <th scope="col">Status</th>
+                          <th scope="col">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -43,6 +44,11 @@
                                       <div class="badge bg-warning">proses</div>
                                       @endif
                                   </td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary">Edit</button>
+                                    <br>
+                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                </td>
                               </tr>
                           @endforeach
                       </tbody>

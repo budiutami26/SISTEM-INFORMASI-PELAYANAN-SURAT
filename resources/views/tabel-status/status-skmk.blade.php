@@ -22,6 +22,7 @@
                           <th scope="col">Nama Mahasiswa</th>
                           <th scope="col">Kelas</th>
                           <th scope="col">Status</th>
+                          <th scope="col">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -42,6 +43,11 @@
                                       <div class="badge bg-warning">proses</div>
                                       @endif
                                   </td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary">Edit</button>
+                                    <br>
+                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                </td>
                               </tr>
                           @endforeach
                       </tbody>

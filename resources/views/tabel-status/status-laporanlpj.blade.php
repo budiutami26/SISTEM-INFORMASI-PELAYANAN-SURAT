@@ -24,6 +24,7 @@
                           <th scope="col">Nama Ketua Pelaksana</th>
                           <th scope="col">Nama Kegiatan</th>
                           <th scope="col">Status</th>
+                          <th scope="col">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -34,7 +35,7 @@
                               <tr>
                                   <td>{{ $no++ }}.</td>
                                   <td>{{ ($item->tanggal_masuk) }}</td>
-                                  <td>{{ ($item->nama_ketua_pelaksana) }}</td>
+                                  <td>{{ ($item->nama) }}</td>
                                   <td>{{ ($item->nama_kegiatan) }}</td>
                                   <td>
                                       @if ($item->status == 'diterima')
@@ -45,6 +46,11 @@
                                       <div class="badge bg-warning">proses</div>
                                       @endif
                                   </td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary">Edit</button>
+                                    <br>
+                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                </td>
                               </tr>
                           @endforeach
                       </tbody>
