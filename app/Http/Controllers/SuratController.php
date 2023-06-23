@@ -68,7 +68,7 @@ class SuratController extends Controller
             'pimpinantuju' => $request->pimpinantuju,
             'judul_tugasakhir' => $request->judul_tugasakhir,
             'tgl_pengajuan' => $request->tgl_pengajuan,
-            'status' => 'proses',
+            'status' => $request->status,
         ]);
 
         return redirect()->route('dashboard');
@@ -88,7 +88,7 @@ class SuratController extends Controller
         'keterangan' => $request->keterangan,
         'tgl_pengambilan' => $request->tgl_pengambilan,
         'tgl_pengembalian' => $request->tgl_pengembalian,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');
@@ -109,7 +109,7 @@ class SuratController extends Controller
         'nama_penanggungjwb' => $request->nama_penanggungjwb,
         'nohp' => $request->nohp,
         'keterangan' => $request->keterangan,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');
@@ -129,7 +129,7 @@ class SuratController extends Controller
         'penggunaan_dana' => $request->penggunaan_dana,
         'jml_dana_disetujui' => $request->jml_dana_disetujui,
         'keterangan' => $request->keterangan,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');
@@ -151,7 +151,7 @@ class SuratController extends Controller
         'nip' => $request->nip,
         'golongan' => $request->golongan,
         'institusi' => $request->institusi,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');
@@ -172,7 +172,7 @@ class SuratController extends Controller
         'nohp' => $request->nohp,
         'jml_dana_disetujui' => $request->jml_dana_disetujui,
         'keterangan' => $request->keterangan,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');
@@ -190,7 +190,7 @@ class SuratController extends Controller
         'prestasi' => $request->prestasi,
         'tingkat' => $request->tingkat,
         'tahun' => $request->tahun,
-        'status' => 'proses',
+        'status' => $request->status,
 
         ]);
         return redirect()->route('dashboard');

@@ -50,7 +50,19 @@
                             <label>Keterangan</label>
                             <input type="text" class="form-control" name="keterangan" value="{{ old('keterangan') }}">
                          </div>
-                       
+                         <div class=" form-group">
+                            {{-- @if(auth()->user()->role == 'petugas') --}}
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status" name="status"
+                                value="{{ Session::get('status') }}">
+                                <option selected disabled value>Status</option>
+                                <option value="diterima">diterima</option>
+                                <option value="ditolak">ditolak</option>
+                                <option value="proses">proses</option>
+                            </select>
+                            {{-- @endif --}}
+                         </div>
+                         <br>
                         <div class="form-group">
                             <button class="btn btn-primary">Simpan</button>
                         </div>

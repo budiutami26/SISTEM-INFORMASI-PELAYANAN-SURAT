@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         User::create([
             'username' => 'mahasiswa',
             'password' => hash::make('pnchebat'),
-            'role' => 'mah',
+            'role' => 'mahasiswa',
             'password' => hash::make('pnchebat'),
             // 'remember_token' => Str::random(60)
         ]);
