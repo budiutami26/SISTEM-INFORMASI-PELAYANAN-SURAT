@@ -16,65 +16,65 @@
                 <div class="card-header">Surat SKMK</div>
                 <div class="card-body">
                     {{--  action="{{ ('observasi') }}" mengambil data dari route name() --}}
-                    <form method="POST" action="{{ ('skmk') }}">
+                    <form method="POST" action="{{ route('update_skmk', $data->id) }}">
                         @csrf
 
                         <div class="form-group">
                             <label>Tanggal</label>
-                            <input type="date" class="form-control" name="tanggal" value="{{ old('tanggal') }}">
+                            <input type="date" class="form-control" name="tanggal" value="{{ $data->tanggal }}">
                          </div>
                         <div class="form-group">
                             <label>NPM</label>
-                            <input type="text" class="form-control" name="npm" value="{{ old('npm') }}">
+                            <input type="text" class="form-control" name="npm" value="{{ $data->npm }}">
                         </div>
                         <div class="form-group">
                             <label>Nama Mahasiswa</label>
-                            <input type="text" class="form-control" name="nama_mhs" value="{{ old('nama_mhs') }}">
+                            <input type="text" class="form-control" name="nama_mhs" value="{{ $data->nama_mhs }}">
                         </div>
                         <div class="form-group">
                             <label>Kelas</label>
-                            <input type="text" class="form-control" name="kelas" value="{{ old('kelas') }}">
+                            <input type="text" class="form-control" name="kelas" value="{{ $data->kelas }}">
                          </div>
                          <div class=" form-group">
                             <label for="semester" class="form-label">Semester</label>
                             <select class="form-select" id="semester" name="semester"
                                 value="{{ Session::get('semester') }}">
-                                <option selected disabled value>Pilih Semester</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
+                                <option  disabled value>Pilih Semester</option>
+                                <option value="1" @if ($data->semester == '1') selected @endif>1</option>
+                                <option value="2" @if ($data->semester == '2') selected @endif>2</option>
+                                <option value="3" @if ($data->semester == '3') selected @endif>3</option>
+                                <option value="4" @if ($data->semester == '4') selected @endif>4</option>
+                                <option value="5" @if ($data->semester == '5') selected @endif>5</option>
+                                <option value="6" @if ($data->semester == '6') selected @endif>6</option>
+                                <option value="7" @if ($data->semester == '7') selected @endif>7</option>
+                                <option value="8" @if ($data->semester == '8') selected @endif>8</option>
                             </select>
-                        </div>
+                        </div>
                         <div class="form-group">
                             <label>Nama Orang Tua</label>
-                            <input type="text" class="form-control" name="nama_ortu" value="{{ old('nama_ortu') }}">
+                            <input type="text" class="form-control" name="nama_ortu" value="{{ $data->nama_ortu }}">
                         </div>
                         <div class="form-group">
                             <label>NIP</label>
-                            <input type="text" class="form-control" name="nip" value="{{ old('nip') }}">
+                            <input type="text" class="form-control" name="nip" value="{{ $data->nip }}">
                         </div>
                         <div class="form-group">
                             <label>Golongan</label>
-                            <input type="text" class="form-control" name="golongan" value="{{ old('golongan') }}">
+                            <input type="text" class="form-control" name="golongan" value="{{ $data->golongan }}">
                         </div>
                         <div class="form-group">
                             <label>Institusi</label>
-                            <input type="text" class="form-control" name="institusi" value="{{ old('institusi') }}">
+                            <input type="text" class="form-control" name="institusi" value="{{ $data->institusi }}">
                          </div>
                          <div class=" form-group">
                             @if(auth()->user()->role == 'petugas')
                             <label for="status" class="form-label">Status</label>
                             <select class="form-select" id="status" name="status"
                                 value="{{ Session::get('status') }}">
-                                <option selected disabled value>Status</option>
-                                <option value="diterima">diterima</option>
-                                <option value="ditolak">ditolak</option>
-                                <option value="proses">proses</option>
+                                <option disabled value>Status</option>
+                                <option @if($data->status == 'ditolak') selected @endif value="ditolak">ditolak</option>
+                                <option @if($data->status == 'diterima') selected @endif value="diterima">diterima</option>
+                                <option @if($data->status == 'proses') selected @endif value="proses">Proses</option>
                             </select>
                             @endif
                          </div>

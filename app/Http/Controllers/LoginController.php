@@ -4,17 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Session;
+// use Session;
 
 class LoginController extends Controller
 {
     public function index()
     {
-        if (Auth::check()) {
-            return view('dashboard');
-        }else{
-            return view('index');
-        }
+        return view('index');
     }
 
     public function dashboard(){
@@ -33,10 +29,10 @@ class LoginController extends Controller
             // }
             return redirect('/dashboard');
         }else{
-            Session::flash('error', 'username atau Password Salah');
-            return redirect('/');
+            // Session::flash('error', 'username atau Password Salah');
+            return back()->with('error', 'username atau Password Salah')->withInput();
         }
-        
+
     }
 
     public function actionlogout()
@@ -45,5 +41,5 @@ class LoginController extends Controller
         return redirect('/login');
     }
 
-    
+
 }

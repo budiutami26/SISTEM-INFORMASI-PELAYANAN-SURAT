@@ -18,7 +18,7 @@
                     {{--  action="{{ ('observasi') }}" mengambil data dari route name() --}}
                     <form method="POST" action="{{ ('lpj') }}">
                         @csrf
-                        
+
                         <div class="form-group">
                             <label>Tanggal Masuk</label>
                             <input type="date" class="form-control" name="tanggal_masuk" value="{{ old('tanggal_masuk') }}">
@@ -33,8 +33,7 @@
                         </div>
                          <div class=" form-group">
                             <label for="semester" class="form-label">Semester</label>
-                            <select class="form-select" id="semester" name="semester"
-                                value="{{ Session::get('semester') }}">
+                            <select class="form-select" id="semester" name="semester">
                                 <option selected disabled value>Pilih Semester</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -42,9 +41,10 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
-                                <option value="7">8</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
-                        </div>
+                        </div>
                         <div class="form-group">
                             <label>Nama Kegiatan</label>
                             <input type="text" class="form-control" name="nama_kegiatan" value="{{ old('nama_kegiatan') }}">
@@ -74,7 +74,7 @@
                             <input type="text" class="form-control" name="keterangan" value="{{ old('keterangan') }}">
                          </div>
                          <div class=" form-group">
-                            {{-- @if(auth()->user()->role == 'petugas') --}}
+                            @if(auth()->user()->role == 'petugas')
                             <label for="status" class="form-label">Status</label>
                             <select class="form-select" id="status" name="status"
                                 value="{{ Session::get('status') }}">
@@ -83,13 +83,13 @@
                                 <option value="ditolak">ditolak</option>
                                 <option value="proses">proses</option>
                             </select>
-                            {{-- @endif --}}
+                            @endif
                          </div>
                          <br>
                         <div class="form-group">
                             <button class="btn btn-primary">Simpan</button>
                         </div>
- 
+
                     </form>
                 </div>
             </div>

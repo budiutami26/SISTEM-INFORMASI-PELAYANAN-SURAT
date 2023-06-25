@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\support\Str;
@@ -17,7 +18,14 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+
+
         User::truncate();
+        User::create([
+            'username' => 'petugas',
+            'password' => hash::make('baakpnc'),
+            'role' => 'petugas',
+        ]);
         User::create([
             'username' => 'mahasiswa',
             'password' => hash::make('pnchebat'),

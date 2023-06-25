@@ -17,7 +17,7 @@
                     {{--  action="{{ ('observasi') }}" mengambil data dari route name() --}}
                     <form method="POST" action="{{ ('ruangan') }}">
                         @csrf
- 
+
                         <div class="form-group">
                             <label>Tanggal</label>
                             <input type="date" class="form-control" name="tanggal" value="{{ old('tanggal') }}">
@@ -61,7 +61,7 @@
                             <input type="text" class="form-control" name="keterangan" value="{{ old('keterangan') }}">
                          </div>
                          <div class=" form-group">
-                            {{-- @if(auth()->user()->role == 'petugas') --}}
+                            @if(auth()->user()->role == 'petugas')
                             <label for="status" class="form-label">Status</label>
                             <select class="form-select" id="status" name="status"
                                 value="{{ Session::get('status') }}">
@@ -70,13 +70,13 @@
                                 <option value="ditolak">ditolak</option>
                                 <option value="proses">proses</option>
                             </select>
-                            {{-- @endif --}}
+                            @endif
                          </div>
                          <br>
                         <div class="form-group">
                             <button class="btn btn-primary">Simpan</button>
                         </div>
- 
+
                     </form>
                 </div>
             </div>
